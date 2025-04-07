@@ -1,0 +1,13 @@
+<h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> ALE FAJNE </h1>
+<ul>
+
+  <ng-container *ngFor="let user of users" >
+    <li *ngIf="user.age>=18" [ngClass]="user.isActive ? 'aktywny' : 'nieaktywny'">
+      {{user.name}}, aktywny: {{user.isActive}} 
+      <button (click)="aktywDez(user)">{{user.isActive ? "Dezaktywuj" : "Aktywuj"}}</button>
+    </li>
+    
+  </ng-container>
+  
+</ul>
+
